@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-orbitron);
+}
+
+:root {
+  --bg-color: #050505;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --accent-primary: #00f2fe;
+  --accent-secondary: #7000ff;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+.font-orbitron {
+  font-family: var(--font-mono), sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+}
+
+.bg-accent-gradient {
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
